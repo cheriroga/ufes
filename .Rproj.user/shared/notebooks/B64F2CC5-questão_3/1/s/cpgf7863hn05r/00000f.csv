@@ -1,0 +1,7 @@
+"0","N <- seq(10, 1000, by = 10)"
+"0","n <- seq(3, 100, by = 1)"
+"0",""
+"0","combinacoes <- expand.grid(N = N, n = n)"
+"0",""
+"0","combinacoes$prob_com_reposicao <- 1 - (1 - 1 / combinacoes$N)^combinacoes$n"
+"0","combinacoes$prob_sem_reposicao <- combinacoes$n / combinacoes$N"

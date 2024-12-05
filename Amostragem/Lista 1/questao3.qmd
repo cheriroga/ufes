@@ -1,0 +1,64 @@
+---
+title: "Questão 3"
+author: "Nathália Dantas Handam Nunes"
+format: pdf
+editor: visual
+---
+
+## Questão 3
+
+Estude a probabilidade de inclusão da $i$-ésima unidade populacional $(\pi_i)$ com $i = 1, \dots, N$, a depender do tamanho da amostra ($n$) e do tamanho da população (N) em cenários de amostragem aleatória simples com e sem reposição. Use gráfico para apresentar seu estudo. Discuta os resultados obtidos.
+
+```{r simulação}
+N <- seq(0, 100, by = 10)
+n <- seq(1, 15, by = 1)
+
+combinacoes <- expand.grid(N = N, n = n)
+
+combinacoes <- combinacoes[combinacoes$n <= combinacoes$N,]
+
+combinacoes$prob_com_reposicao <- 1 - (1 - 1 / combinacoes$N)^combinacoes$n
+combinacoes$prob_sem_reposicao <- combinacoes$n / combinacoes$N
+```
+
+Use gráficos para apresentar seu estudo.
+
+```{r  grafico_com_reposicao}
+library(ggplot2)
+
+grafico_com_reposicao <- ggplot(combinacoes, 
+                                aes(x = n, y = prob_com_reposicao, 
+                                    color = as.factor(N))) +
+  geom_line() +
+  scale_color_viridis_d() +
+  labs(
+    title = "Probabilidade de Inclusão (c/ Reposição)",
+    x = "Tamanho da Amostra (n)",
+    y = "Probabilidade de Inclusão (πi)",
+    color = "Tamanho da População (N)"
+  ) +
+  theme_minimal()
+
+grafico_com_reposicao
+```
+
+```{r grafico_sem_reposicao}
+grafico_sem_reposicao <- ggplot(combinacoes, 
+                                aes(x = n, y = prob_sem_reposicao, 
+                                    color = as.factor(N))) +
+  geom_line() +
+  scale_color_viridis_d() +
+  labs(
+    title = "Probabilidade de Inclusão (s/ Reposição)",
+    x = "Tamanho da Amostra (n)",
+    y = "Probabilidade de Inclusão (πi)",
+    color = "Tamanho da População (N)"
+  ) +
+  theme_minimal()
+
+grafico_sem_reposicao
+```
+
+Os gráficos mostram como a probabilidade de um elemento ser incluído em uma amostra varia conforme o tamanho da população N e da amostra n, considerando cenários com e sem reposição. No caso **sem reposição**, a probabilidade de inclusão cresce de forma linear com o aumento do tamanho da amostra. Para populações menores, a probabilidade aumenta rapidamente, pois cada elemento retirado reduz o total de opções disponíveis. Já para populações maiores, essa probabilidade cresce de forma mais lenta, porque o impacto da retirada de um elemento é menor. Quando o tamanho da amostra n se aproxima do tamanho da população N, a probabilidade de inclusão tende a 100%, já que todos os elementos acabam sendo selecionados.
+
+Já no caso **com reposição**, a probabilidade de inclusão cresce de forma mais gradual, já que cada elemento é devolvido à população após ser escolhido. Nesse cenário, mesmo que o tamanho da amostra seja grande, nenhum elemento tem garantia de ser incluído, o que diferencia este caso do sem reposição. Para populações menores, a probabilidade aumenta mais rápido, mas ainda assim não atinge 100%, enquanto, para populações maiores, o crescimento é ainda mais lento. Isso demonstra que a reposição reduz as chances de inclusão de cada elemento, especialmente em amostras maiores, quando comparado ao cenário sem reposição.
