@@ -1,0 +1,15 @@
+a =
+pi customer_name, branch_name
+(customer ⨝ borrower ⨝ loan ⨝ branch)
+
+b =
+pi customer_name, branch_name
+sigma customer_name = 'Hayes' 
+(account ⨝ depositor ⨝ customer)
+
+pi a.customer_name
+sigma 
+a.branch_name = b.branch_name
+and
+a.customer_name ≠ b.customer_name
+(rho a (a) x rho b (b))

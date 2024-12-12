@@ -1,0 +1,6 @@
+pi a.customer_name
+sigma 
+a.customer_street = b.customer_street 
+and
+a.customer_city ≠ b.customer_city
+(rho a (customer) x rho b (customer))

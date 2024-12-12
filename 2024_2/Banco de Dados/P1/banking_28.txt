@@ -1,0 +1,4 @@
+pi customer_name
+sigma num_branchs > 1
+gamma customer_name ; count(branch_name) -> num_branchs
+(borrower ⨝ loan)
