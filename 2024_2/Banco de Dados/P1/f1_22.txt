@@ -1,0 +1,18 @@
+a =
+gamma ; min(year) -> year (races)
+
+b =
+gamma ; min(round) -> round (races)
+
+c =
+pi gpId, circuitId
+(races ⨝ a ⨝ b)
+
+d =
+pi circuits.country -> Pais,
+gpId
+(c ⨝ circuits)
+
+pi name -> GP,
+Pais
+(d ⨝ gps)

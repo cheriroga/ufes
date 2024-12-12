@@ -1,0 +1,26 @@
+a =
+pi constructorId
+sigma name = 'Ferrari' (constructors)
+
+b =
+pi driverId
+sigma forename = 'Michael' and surname = 'Schumacher' (drivers)
+
+-- corridas do michael schumacher na ferrari
+c =
+pi raceId,
+driverId
+(results ⨝ a ⨝ b)
+
+-- todas as corridas da ferrari e o nome dos pilotos
+d =
+pi concat(forename, ' ', surname) -> Piloto,
+raceId,
+driverId
+(results ⨝ drivers ⨝ a)
+
+pi Piloto
+sigma c.raceId = d.raceId
+and
+ c.driverId ≠ d.driverId
+(rho c (c) x rho d (d))

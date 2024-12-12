@@ -1,0 +1,13 @@
+a =
+gamma year ; count(raceId) -> num_corridas 
+sigma year = 2012
+(races)
+
+b =
+gamma constructorId ; count(raceId) -> num_corridas
+pi raceId, constructorId
+sigma points > 0 and year = 2012
+(results ⨝ races)
+
+pi name -> Equipe
+(a ⨝ b ⨝ constructors)
