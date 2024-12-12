@@ -1,0 +1,21 @@
+total_corridas_ano =
+gamma year ; count(raceId) -> num_corridas (races)
+
+equipes_total_corridas =
+gamma year, constructorId ; count(raceId) -> num_corridas 
+(pi year, constructorId, raceId(results ⨝ races))
+
+equipes_sem_pontos =
+sigma pontos = 0
+gamma year, constructorId ; sum(points) -> pontos 
+(results ⨝ races)
+
+-- 
+
+equipes_correram_total_corridas_sem_pontos = 
+(total_corridas_ano ⨝ equipes_total_corridas ⨝ equipes_sem_pontos)
+
+-- 
+pi constructors.name -> Equipe,
+year -> Ano
+(equipes_correram_total_corridas_sem_pontos ⨝ constructors)

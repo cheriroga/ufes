@@ -1,0 +1,14 @@
+t1 =
+gamma year, driverId; count(raceId) -> num_corridas
+sigma points > 0
+(results natural join races)
+
+t2 =
+gamma year ; count(raceId) -> num_corridas (rho r (races))
+
+t3 =
+(t1 natural join t2)
+
+pi concat(forename, ' ', surname) -> Piloto,
+races.year -> Ano
+(t3 natural join drivers)

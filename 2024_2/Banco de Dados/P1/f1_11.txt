@@ -1,0 +1,7 @@
+num_equipes =
+gamma year ; count(constructorId) -> num_equipes
+(pi year, constructorId
+(races natural join results))
+
+pi round(media) -> MediaEquipes
+(gamma ; avg(num_equipes) -> media (num_equipes))

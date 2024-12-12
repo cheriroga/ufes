@@ -1,0 +1,15 @@
+t1 =
+gamma year, driverId ; sum(points) -> pontos
+(results natural join races)
+
+t2 =
+gamma year; max(pontos) -> pontos
+(t1)
+
+top_quatro =
+sigma aparicoes >= 4
+gamma driverId ; count(year) -> aparicoes
+(t1 natural join t2)
+
+pi concat(forename, ' ', surname) -> Piloto
+(top_quatro natural join drivers)

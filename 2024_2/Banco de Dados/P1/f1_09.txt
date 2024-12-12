@@ -1,0 +1,5 @@
+num_corridas_por_ano =
+gamma year ; count(raceId) -> num_corridas (races)
+
+pi round(media) -> MediaCorridas
+(gamma ; avg(num_corridas) -> media (num_corridas_por_ano))

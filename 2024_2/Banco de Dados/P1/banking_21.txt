@@ -1,0 +1,5 @@
+b = sigma branch_name = 'Downtown' (loan)
+
+pi a.loan_number
+sigma a.amount <= b.amount
+(rho a (loan) x rho b (b))

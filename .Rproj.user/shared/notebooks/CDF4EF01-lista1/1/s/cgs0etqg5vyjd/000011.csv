@@ -1,6 +1,0 @@
-"0","# Plotando as 100 trajetórias
-matplot(1:56, caminhos, type = ""l"", col = rainbow(trajetorias), lwd = 1, xlab = ""Número de Passos"", ylab = ""Posição"", main = ""100 Trajetórias de Caminho Aleatório 1D"")
-"
-"2","Error in matplot(1:56, caminhos, type = ""l"", col = rainbow(trajetorias),  : 
-  'x' e 'y' devem ter o mesmo número de linhas
-"

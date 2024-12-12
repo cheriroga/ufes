@@ -1,0 +1,13 @@
+num_corridas =
+gamma circuitId ; count(raceId) -> num_corridas
+(pi circuitId, raceId
+(results natural join races))
+
+max_corridas = 
+gamma ; max(num_corridas) -> num_corridas (num_corridas)
+
+juncao = 
+num_corridas natural join max_corridas
+
+pi name
+(juncao natural join circuits)

@@ -1,0 +1,14 @@
+num_corridas =
+gamma constructorId ; count(raceId) -> num_corridas
+(pi constructorId, driverId, raceId
+(results)
+)
+min_corridas = 
+gamma ; min(num_corridas) -> num_corridas (num_corridas)
+
+juncao =
+num_corridas natural join min_corridas
+
+pi name -> Equipe,
+num_corridas -> Aparicoes
+(juncao natural join constructors)

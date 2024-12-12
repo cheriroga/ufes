@@ -1,0 +1,9 @@
+pi a.codigo -> codigo_auto1, a.ano -> ano_auto1,
+b.codigo -> codigo_auto2, b.ano -> ano_auto2 
+(sigma
+	a.fabricante = b.fabricante and
+	a.modelo = b.modelo and
+	a.preco_tabela - b.preco_tabela > 1000 (
+		rho a (automoveis) x rho b (automoveis)
+		)
+)

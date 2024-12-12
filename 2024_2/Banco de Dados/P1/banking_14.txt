@@ -1,0 +1,1 @@
+pi customer_name, customer_city( sigma branch_name like 'Perryridge' (borrower ⨝ loan ⨝ customer))

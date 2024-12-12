@@ -1,0 +1,1 @@
+pi c.nome, c.sobrenome, n.cgc ((rho c (consumidores) ⟗ rho n (negocios)))

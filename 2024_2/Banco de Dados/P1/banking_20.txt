@@ -1,0 +1,6 @@
+b = sigma branch_name = 'North Town' (account)
+
+pi a.account_number
+sigma a.balance < b.balance
+(rho a (account) x rho b (b))
+

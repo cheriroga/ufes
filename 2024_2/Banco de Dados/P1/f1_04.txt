@@ -1,0 +1,7 @@
+gps_gp = pi gpId (gps)
+races_gp = pi gpId (races)
+
+no_gp =
+(gps_gp - races_gp)
+
+pi name (gps natural join no_gp) 

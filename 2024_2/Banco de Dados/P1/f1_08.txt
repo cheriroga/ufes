@@ -1,0 +1,16 @@
+num_corridas_por_circuito =
+gamma circuitId; count(raceId) -> num_corridas (races)
+
+num_corrigas_por_driver_e_circuito =
+gamma driverId,circuitId; count(raceId) -> num_corridas 
+(pi raceId,driverId,circuitId
+(races ⨝ results))
+
+drivers_todas_corridas =
+num_corridas_por_circuito ⨝ num_corrigas_por_driver_e_circuito
+
+pi 
+concat(forename, ' ',surname) -> Piloto,
+circuits.name -> Circuito
+(drivers_todas_corridas ⨝ drivers
+                        ⨝ circuits)

@@ -1,0 +1,3 @@
+crn = rho c (consumidores) x rho r (revendedoras) x rho n (negocios)
+
+pi c.nome, c.sobrenome, r.cgc (sigma c.cpf = n.cpf and r.cgc = n.cgc (crn))

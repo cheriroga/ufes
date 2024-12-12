@@ -1,0 +1,10 @@
+branch_account =
+pi branch_name, branch_city
+sigma customer_name = 'Hayes' (customer ⨝ depositor ⨝ account ⨝ branch)
+
+branch_borrower =
+pi branch_name, branch_city
+sigma customer_name = 'Hayes'
+(customer ⨝ borrower ⨝ loan ⨝ branch)
+
+branch_account ∩ branch_borrower

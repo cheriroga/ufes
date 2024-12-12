@@ -1,0 +1,8 @@
+cc = pi cpf (consumidores)
+cn = pi cpf (negocios)
+
+t1 = cc - cn
+
+t2 = consumidores ⨝ t1
+
+t2

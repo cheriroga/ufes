@@ -1,0 +1,2 @@
+t1 = pi modelo (sigma fabricante like 'Fiat' (automoveis))
+gamma count (automoveis.modelo) -> modelo (t1)

@@ -1,0 +1,7 @@
+rp = sigma positionOrder <= 3 (results)
+t1 = rho rp (rp) ⨝ rho d (drivers)
+nd = pi d.nationality (t1)
+nc = pi nationality (constructors)
+final = nd - nc
+
+final

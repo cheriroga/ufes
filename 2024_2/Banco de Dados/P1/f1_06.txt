@@ -1,0 +1,11 @@
+todos =
+pi constructorId (constructors)
+
+top_3 =
+pi constructorId
+(sigma positionOrder <= 3 (results))
+
+resto =
+todos - top_3
+
+pi name (resto ⨝ constructors)

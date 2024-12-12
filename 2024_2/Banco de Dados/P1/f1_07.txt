@@ -1,0 +1,21 @@
+equipes_francesas =
+sigma nationality = 'French' (constructors)
+top1 = 
+sigma positionOrder = 1 (results)
+
+resultado_top1 = 
+			pi results.constructorId,
+				 concat(forename, ' ', surname) -> Piloto,
+				 circuits.name -> Circuito,
+				 year -> Ano
+			(
+			top1 natural join races
+			 		 natural join drivers
+			     natural join circuits
+			)
+
+pi constructors.name -> Equipe,
+   Piloto, 
+	 Circuito,
+	 Ano
+(equipes_francesas ⟕ resultado_top1)

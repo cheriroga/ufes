@@ -1,0 +1,14 @@
+num_corridas =
+gamma year ; count(raceId) -> num_corridas
+(pi raceId, year
+(results natural join races))
+
+max_corridas =
+gamma ; max(num_corridas) -> num_corridas (num_corridas)
+
+juncao =
+num_corridas natural join max_corridas
+
+pi year -> Temporada,
+num_corridas -> Corridas
+(juncao natural join gps)

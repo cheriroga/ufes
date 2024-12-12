@@ -1,0 +1,3 @@
+pi account_number (
+	sigma balance ≥ 700 and balance ≤ 900 (account)
+)

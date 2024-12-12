@@ -1,0 +1,4 @@
+nc = pi nationality (constructors)
+nd = pi nationality (drivers)
+
+nc - nd

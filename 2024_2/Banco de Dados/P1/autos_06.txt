@@ -1,0 +1,2 @@
+cn = rho c (consumidores) ⟕ rho n (negocios)
+pi c.nome, c.sobrenome, n.cgc (cn)

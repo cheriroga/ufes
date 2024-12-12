@@ -1,0 +1,7 @@
+num_drivers =
+gamma year ; count(driverId) -> num_drivers
+(pi year, driverId
+(races natural join results))
+
+pi round(media) -> MediaPilotos
+(gamma ; avg(num_drivers) -> media (num_drivers))

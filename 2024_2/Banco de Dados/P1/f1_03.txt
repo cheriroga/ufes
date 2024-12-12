@@ -1,0 +1,8 @@
+circuitos = pi circuitId (circuits)
+corridas = pi circuitId (races)
+
+t1 = circuitos - corridas
+
+t2 = circuits ⨝ t1
+
+pi circuits.name (t2)

@@ -1,0 +1,8 @@
+cr = pi cgc (revendedoras)
+cn = pi cgc (negocios)
+
+t1 = cr - cn
+
+t2 = revendedoras ⨝ t1
+
+t2

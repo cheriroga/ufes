@@ -1,0 +1,6 @@
+b = sigma branch_city = 'Brooklyn' (branch)
+
+pi a.branch_name
+sigma a.assets > b.assets
+(rho a (branch) x rho b (b))
+

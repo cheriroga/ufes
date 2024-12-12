@@ -1,0 +1,1 @@
+pi r.cgc, r.nome, n.cpf ((rho r (revendedoras) ⟗ rho n (negocios)))

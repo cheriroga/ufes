@@ -1,0 +1,8 @@
+dI = pi driverId (drivers)
+rI = pi driverId (results)
+
+resultado =
+(dI - rI)
+
+pi concat (forename, ' ', surname) -> Piloto 
+(resultado natural join drivers)

@@ -1,5 +1,0 @@
-"0","combinacoes <- combinacoes[combinacoes$n <= combinacoes$N]
-"
-"2","Error in `[.data.frame`(combinacoes, combinacoes$n <= combinacoes$N) : 
-  colunas indefinidas selecionadas
-"

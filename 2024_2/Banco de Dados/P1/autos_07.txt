@@ -1,0 +1,15 @@
+negocios_automoveis  = 
+(negocios ⨝ automoveis)
+
+negocios_automoveis_revendedoras =
+negocios_automoveis ⨝ revendedoras
+
+pi nome_c <- consumidores.nome,
+	 sobrenome_c <- consumidores.sobrenome,
+	 nome_r <- revendedoras.nome,
+	 fabricante <- automoveis.fabricante,
+	 modelo <- automoveis.modelo,
+	 data <- negocios.data,
+	 preco <- negocios.preco
+			(sigma negocios.cpf = consumidores.cpf 
+					(negocios_automoveis_revendedoras ⨯ consumidores))

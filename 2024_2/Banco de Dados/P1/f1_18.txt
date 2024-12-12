@@ -1,0 +1,13 @@
+t1 = gamma year, constructorId; sum(points) -> pontos
+(results natural join races)
+
+t2 = gamma year ; max(pontos) -> pontos
+(t1)
+
+t3 =
+sigma aparicoes >= 2
+(gamma constructorId ; count(year) -> aparicoes
+(t1 natural join t2))
+
+pi name -> Equipe
+(t3 natural join constructors)

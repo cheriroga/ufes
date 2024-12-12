@@ -1,0 +1,14 @@
+num_corridas =
+gamma driverId ; count(raceId) -> num_corridas 
+pi driverId, raceId
+(results)
+
+max_corridas =
+gamma ; max(num_corridas) -> num_corridas (num_corridas)
+
+juncao =
+(num_corridas natural join max_corridas)
+
+pi concat(forename, ' ', surname) -> Piloto, 
+num_corridas -> Aparicoes
+(juncao natural join drivers)
